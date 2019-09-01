@@ -66,7 +66,7 @@ def calculate_fitness():
         Zin5 = Zin4 + Zl3
         Zin6 = 1.0 / (1.0 / Zin_2 + 1.0 / Zin5)
         Zin7 = Zin6 + Zl4
-        Zin8 = 1.0 / (1.0 / Zin_1 + 1.0 / Zin7 + 1.0 / Rx)
+        Zin8 = 1.0 / (1.0 / Zin_1 + 1.0 / Zin7 + 1.0 / Rl)
         Zin9 = Zin8 + Zl5  
 
         Zout1 = Zd + zl1  
