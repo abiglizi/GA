@@ -4,6 +4,7 @@
 * 交叉率和变异率采用自适应遗传算法
 
 # matlab线性拟合
-matlab线性拟合：使用regress函数
+ 采用regress函数
 
 # GA_SA
+ 混合遗传算法
