@@ -135,6 +135,19 @@ def crossover():
             temp1.extend(genetic_population[i + 1][change_point:])
             temp2.extend(genetic_population[i + 1][0: change_point])
             temp2.extend(genetic_population[i][change_point:])
+            #两点均匀交叉
+            '''
+            change_point_1 = 3
+            change_point_2 = 6
+            temp1 = []
+            temp2 = []
+            temp1.extend(genetic_population[i + 1][0: change_point_1])
+            temp1.extend(genetic_population[i][change_point_1:change_point_2])
+            temp1.extend(genetic_population[i + 1][change_point_2:])
+            temp2.extend(genetic_population[i][0: change_point_1])
+            temp2.extend(genetic_population[i + 1][change_point_1:change_point_2])
+            temp2.extend(genetic_population[i][change_point_2:])
+            '''
             genetic_population[i] = temp1
             genetic_population[i + 1] = temp2
 
