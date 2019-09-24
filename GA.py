@@ -82,28 +82,8 @@ def calculate_fitness():
         S11 = 20 * math.log(abs((Zin9 - 50) / (Zin9 + 50)), 10)
         S22 = 20 * math.log(abs((50 - Zout9) / (Zout9 + 50)), 10)
 
-        I1 = (Zin_1 + Rl) / (Zin_1 + Zin7 + Rl)
-        I2 = (Zin_2 / (Zin_2 + Zin5)) * I1
-        I3 = (Zin_3 / (Zin_3 + Zin3)) * I2
-        I4 = (Zin_4 / (Zin_4 + Zin1)) * I3
-
-        Izin1_gc = (Zin7 + Rl) / (Zin_1 + Zin7 + Rl)
-        Izin2_gc = I1 * Zin5 / (Zin_2 + Zin5)
-        Izin3_gc = I2 * Zin3 / (Zin_3 + Zin3)
-        Izin4_gc = I3 * Zin1 / (Zin_4 + Zin1)
-
-        Iout4 = gm * Zout1 * Zin_1 * Izin1_gc / Zout1  
-        Izout4_gc = gm * Zin_4 * Izin4_gc
-        Izout3_gc = gm * Zin_3 * Izin3_gc
-        Izout2_gc = gm * Zin_2 * Izin2_gc
-        Izout1_gc = gm * Zin_1 * Izin1_gc
-
-        Iout = Izout1_gc + Izout2_gc + Izout3_gc + Izout4_gc + Iout4
-        Vout = (zl5 + Zc) * Iout + Izout4_gc * Zout_4
-        Vin = Izin1_gc * Zin_1 + Zl5 + Zc
-
         function_value = 20 * math.log(2.0 * abs(1.0 / (1.0 / (Zout9+Zd) + 1.0 / (Zin9+Zg))) * gm, 10)
-        print("增益:", function_value, end="\n")
+        #print("增益:", function_value, end="\n")
 
         if S11 < -15 and S22 < -15 and function_value>=8:
             sum += function_value
