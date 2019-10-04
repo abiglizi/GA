@@ -125,7 +125,7 @@ def crossover():
             count = i
         else:
             count = i + 1
-        if fitness[count] >= fit_mean:
+        if fitness[count] > fit_mean:
             pc = pc1 - (pc1 - pc2) * (fitness[count] - fit_mean) / (best_fitness - fit_mean)
         else:
             pc = pc1
@@ -145,7 +145,7 @@ def mutation():
     pm1 = 0.1
     pm2 = 0.02
     for i in range(population_size):
-        if fitness[i] >= fit_mean:
+        if fitness[i] > fit_mean:
             pm = pm1 - (pm1 - pm2) * (fitness[i] - fit_mean) / (best_fitness - fit_mean)
         else:
             pm = pm1
