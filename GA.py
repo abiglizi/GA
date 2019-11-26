@@ -198,11 +198,11 @@ print("final time =", end - start)
 fig1 = plt.figure(1)
 plt.plot(range(1, generations + 1), optimum_solution)
 plt.xlabel('迭代次数', fontproperties='SimHei')
-plt.ylabel('最优解', fontproperties='SimHei')
+plt.ylabel('增益/dB', fontproperties='SimHei')
 
 # 平均适应度随迭代次数的变化
 fig2 = plt.figure(2)
 plt.plot(range(1, generations + 1), fitness_mean)
 plt.xlabel('迭代次数', fontproperties='SimHei')
-plt.ylabel('平均适应度', fontproperties='SimHei')
+plt.ylabel('平均增益/dB', fontproperties='SimHei')
 plt.show()
